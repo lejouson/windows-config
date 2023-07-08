@@ -15,3 +15,4 @@
 	remotes = remote -vj
 [core]
 	sshCommand = C:\\\\Windows\\\\System32\\\\OpenSSH\\\\ssh.exe
+	editor = code-insiders --wait
