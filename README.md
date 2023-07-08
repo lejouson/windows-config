@@ -1,75 +1,39 @@
-# Configuración para Windows
-
-Lista de tareas para configurar una máquina Windows desde cero.
+# Configuración de Windows
 
 Inspirado en [dotfiles for Windows de Jay Harris](https://github.com/jayharris/dotfiles-windows) y [config de Mark Otto](https://github.com/mdo/config).
 
-## Dependencias (Revisar)
+## Ficheros de configuración
 
-Ejecutar en Powershell con privilegios de administrador.
+Crea enlaces directos a los ficheros del repositorio en las ubicaciones en las que se espera encontrar estos ficheros para añadir:
 
-- [Windows Terminal](https://www.microsoft.com/store/productId/9N0DX20HK701)
-- [PowerShell](https://www.microsoft.com/store/productId/9MZ1SNWT0N5D)
-- [Git](https://git-scm.com/)
+- Powershell
+	- Alias
+	- Funciones
+	- Prompt
+- Configuración de aplicaciohnes
+	- EditorConfig
+	- Git
+	- Vim
 
-```powershell
-> .\Dependencies.ps1
-```
+Al hacer uso de enlaces, hace que los cambios realizados en los ficheros en sus ubicaciones naturales se reflejen también en los ficheros del repositorio.
 
-- [Google Chrome](https://www.google.com/intl/es/chrome)
-- [Google Drive](https://www.google.com/intl/es/drive/download/)
-- [Visual Studio Code](https://code.visualstudio.com/)
-- [Toggl](https://toggl.com/)
-- [7-zip](https://www.7-zip.org/) ([7-zip ZS](https://mcmilk.de/projects/7-Zip-zstd/))
-- [Discord](https://discord.com/)
-- [Wacom drivers y CLIP Studio Paint](https://www.wacom.com/es-es)
-- [Steam](https://store.steampowered.com/)
-
-## Desarrollo en contenedores con Visual Studio Code
-
-- [Desarrollo remoto con Visual Studio Code](https://code.visualstudio.com/docs/remote/remote-overview)
-- [Docker Desktop WSL 2 backend](https://docs.docker.com/docker-for-windows/wsl/)
-- [Windows Subsystem for Linux Installation Guide for Windows 10](https://docs.microsoft.com/en-us/windows/wsl/install-win10)
-
-## Google Chrome
-
-Activar la sincronización.
-
-![configuración de chrome](chrome_settings.webp)
-
-Crear accesos directos para las aplicaciones.
-
-![acceso directo](shortcut.webp)
-
-![menú inicio](start_menu.webp)
-
-## Google Drive
-
-Sincronizar en la carpeta de datos.
-
-![sincronizar Drive](drive_sync.webp)
-
-## Configuración de terminal
-
-Configuración de terminal y de las utilidades que habitualmente se utilizan desde el terminal como, p. e., git.
-
-Ejecutar en Powershell con privilegios de administrador. Crea accesos directos a los ficheros contenidos en el proyecto en las carpetas correspondientes.
+Para instalar los enlaces ejecutar el siguiente script con permisos de administrador.
 
 ```powershell
 > .\Bootstrap.ps1
 ```
 
-### Vim
+## Aplicaciones
 
-Solo para el vim que viene con git para Windows, no quiero instalar vim aparte.
+Aplicaciones de uso cotidiano, características de Windows, ficheros de ayuda, etc. Require una instalación operativa de winget (disponible de fábrica en las nuevas versiones de Windows).
 
-En git bash:
+Ejecutar con permisos de administrador.
 
-```bash
-vim +PlugInstall +qall
+```powershell
+> .\Apps.ps1
 ```
 
-## Futuros pasos
+## Tareas pendientes
 
 - [ ] Configuración para Linux
 
